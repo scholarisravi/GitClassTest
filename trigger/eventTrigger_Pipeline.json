@@ -1,0 +1,30 @@
+{
+	"name": "eventTrigger_Pipeline",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "EventTrigger_Pipeline",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"SourcePath": "@triggerBody().filePath",
+					"SourceFilename": "@triggerBody().fileName"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/testdemo/blobs/input/",
+			"blobPathEndsWith": ".txt",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/b3d303c1-b950-4131-b84b-8f23b6c20786/resourceGroups/TestDemo_Azure/providers/Microsoft.Storage/storageAccounts/storagedemo3097",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}

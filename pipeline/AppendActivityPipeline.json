@@ -1,0 +1,36 @@
+{
+	"name": "AppendActivityPipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Append List of Files Variables",
+				"type": "AppendVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "ListOfVariables",
+					"value": {
+						"value": "@pipeline().parameters.FileName",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"FileType": {
+				"type": "String"
+			},
+			"ListOfVariables": {
+				"type": "Array"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-10-24T09:58:31Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

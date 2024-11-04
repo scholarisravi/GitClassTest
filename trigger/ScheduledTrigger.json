@@ -1,0 +1,26 @@
+{
+	"name": "ScheduledTrigger",
+	"properties": {
+		"description": "This is ScheduledTrigger",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyDataFromSourceToDestination_Pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2024-10-23T03:45:00",
+				"endTime": "2024-10-23T03:46:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

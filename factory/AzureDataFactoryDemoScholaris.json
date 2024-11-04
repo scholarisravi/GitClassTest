@@ -1,0 +1,9 @@
+{
+	"name": "AzureDataFactoryDemoScholaris",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e24cc124-566a-4981-84f9-c16f049959fb",
+		"tenantId": "7d71e05d-41bf-48dc-ace7-e21db7ea91c7"
+	}
+}

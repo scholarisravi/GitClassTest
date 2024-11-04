@@ -1,0 +1,31 @@
+{
+	"name": "PostgreSql1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"serverName_LinkedService": {
+				"type": "string"
+			},
+			"dbName_LinkedService": {
+				"type": "string"
+			},
+			"userName_LinkedService": {
+				"type": "string"
+			},
+			"password_LinkedService": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "PostgreSqlV2",
+		"typeProperties": {
+			"server": "@{linkedService().serverName_LinkedService}",
+			"port": 5432,
+			"database": "@{linkedService().dbName_LinkedService}",
+			"username": "@{linkedService().userName_LinkedService}",
+			"sslMode": 2,
+			"authenticationType": "Basic",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEI5RDRFRUMwLTg2QjAtNDVBNy04QjMzLTkyRjNGQjk0NTFDRl8zMjA3NTQ3MC1iZjQxLTQxYjgtYTA4Mi02NWQyN2JkM2I2NTAiDQp9"
+		}
+	}
+}
